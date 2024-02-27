@@ -50,7 +50,6 @@ const SideNavTop = ({ user, setActiveTeamInfo }: any) => {
     const result = await convex.query(api.teams.getTeam, {
       email: user?.email,
     });
-    console.log('TeamList', result);
     setTeamList(result);
     setActiveTeam(result[0]);
   };
